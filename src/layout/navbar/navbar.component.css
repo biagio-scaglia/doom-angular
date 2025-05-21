@@ -1,0 +1,93 @@
+.doom-navbar {
+    background: linear-gradient(to bottom, #3a0000, #1a0000);
+    border: 3px solid #5a0000;
+    border-top: 3px solid #8b0000;
+    border-bottom: 3px solid #2a0000;
+    box-shadow: 
+        0 0 12px #ff000055,
+        inset 0 0 8px #5a0000;
+    font-family: 'Courier New', monospace;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.doom-navbar-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap; 
+}
+
+.doom-navbar-link {
+    color: #e0a0a0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem); 
+    letter-spacing: 1px;
+    padding: 0.6rem 1rem;
+    position: relative;
+    transition: all 0.2s ease;
+    text-shadow: 
+        0 0 4px #ff0000,
+        2px 2px 0 #000;
+    background: 
+        linear-gradient(to right, #3a0000aa, #5a000055, #3a0000aa);
+    border: 1px solid #5a0000;
+    margin: 0.2rem;
+    display: block;
+    min-width: 80px; 
+}
+
+.doom-mobile-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: #ff0000;
+    text-align: center;
+    font-size: 1.5rem;
+    background: #2a0000;
+    border-bottom: 2px solid #5a0000;
+}
+
+
+
+@keyframes doom-slide-down {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (hover: hover) {
+    .doom-navbar-link:hover {
+        color: #ff3030;
+        background: linear-gradient(to right, #5a0000, #8b0000, #5a0000);
+        box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff000055;
+        border: 1px solid #ff4040;
+        transform: scale(1.05);
+    }
+
+    .doom-navbar-link:hover::before {
+        content: '†';
+        position: absolute;
+        left: -10px;
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000;
+        animation: doom-pulse 0.5s infinite alternate;
+    }
+}
+
+.doom-navbar-link:active {
+    color: #ffffff;
+    background: #ff0000;
+    text-shadow: 0 0 10px #fff;
+}
+

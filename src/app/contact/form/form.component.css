@@ -1,0 +1,89 @@
+.coverage-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 2rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #ff2a2a;
+}
+
+.coverage-title {
+  color: #ff2a2a;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+.coverage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #ccc;
+}
+
+.form-input {
+  padding: 0.75rem;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff2a2a;
+  box-shadow: 0 0 0 2px rgba(255, 42, 42, 0.2);
+}
+
+.verify-button {
+  padding: 0.75rem;
+  background: #ff2a2a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.verify-button:hover {
+  background: #ff1a1a;
+}
+
+.result-message {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.success {
+  color: #4caf50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #f44336;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.reset-button {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+    .carousel-container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: fadeCarousel 25s infinite;
+    }
+
+    .carousel-slide:nth-child(1) { animation-delay: 0s; }
+    .carousel-slide:nth-child(2) { animation-delay: 5s; }
+    .carousel-slide:nth-child(3) { animation-delay: 10s; }
+    .carousel-slide:nth-child(4) { animation-delay: 15s; }
+    .carousel-slide:nth-child(5) { animation-delay: 20s; }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes fadeCarousel {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      100% { opacity: 0; }
+    }

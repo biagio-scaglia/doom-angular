@@ -1,0 +1,26 @@
+<div class="game-container">
+  <div class="doom-box">
+    <img [src]="img" alt="doom-img" class="doom-img">
+    <div class="doom-title">{{title}}</div>
+    <div class="doom-text">{{paragrafo}}</div>
+    <div class="doom-text">{{versione}}</div>
+  </div>
+
+  <div class="offers-section">
+    <h3 class="section-title">Offerte disponibili:</h3>
+
+    <div class="offer-card">
+      <h4 class="offer-title">{{offertaStandard.titolo}}</h4>
+      <p class="offer-description">{{offertaStandard.descrizione}}</p>
+      <p class="offer-price">Prezzo: €{{offertaStandard.prezzo}}</p>
+    </div>
+
+    @if (offertaSpeciale) {
+      <div class="offer-card highlight">
+        <h4 class="offer-title">{{offertaSpeciale.titolo}}</h4>
+        <p class="offer-description">{{offertaSpeciale.descrizione}}</p>
+        <p class="offer-price">Prezzo: €{{offertaSpeciale.prezzo}}</p>
+      </div>
+    }
+  </div>
+</div>

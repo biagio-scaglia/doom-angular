@@ -1,0 +1,115 @@
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.doom-box {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 3px solid #ff2a2a;
+  padding: 25px;
+  background: #111;
+  margin: 0 auto 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doom-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.3);
+}
+
+.doom-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ff2a2a;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.doom-title {
+  color: #ff2a2a;
+  font-size: 2.2rem;
+  margin: 0 0 15px 0;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+  letter-spacing: 1px;
+}
+
+.doom-text {
+  color: #e0e0e0;
+  margin: 12px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.offers-section {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.section-title {
+  color: #ff2a2a;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+.offer-card {
+  background: #222;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #ff2a2a;
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+  background: #252525;
+  transform: translateX(5px);
+}
+
+.offer-card.highlight {
+  border-left: 4px solid #facc15;
+  background: #1e1e1e;
+}
+
+.offer-card.highlight:hover {
+  background: #222;
+}
+
+.offer-card.highlight .offer-title {
+  color: #facc15;
+}
+
+.offer-title {
+  color: #ff2a2a;
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+
+.offer-description {
+  color: #ccc;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+.offer-price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.offer-card.highlight .offer-price {
+  color: #facc15;
+}

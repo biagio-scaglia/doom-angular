@@ -1,0 +1,17 @@
+<div class="doom-cards-horizontal">
+  @for (card of cards; track card.titolo; let idx = $index) {
+  <div class="doom-card">
+    <div class="doom-card-header">
+      <h3>{{ card.titolo }}</h3>
+      <span class="doom-card-icon">†</span>
+    </div>
+    <div class="doom-card-content">
+      <p>{{ card.paragrafo }}</p>
+    </div>
+    <div class="doom-card-footer">
+      <a routerLink="{{card.a}}" routerLinkActive="active" ariaCurrentWhenActive="page" ><button class="doom-btn">{{card.button}}</button></a>
+    </div>
+  </div>
+  }
+</div>
+<router-outlet></router-outlet>

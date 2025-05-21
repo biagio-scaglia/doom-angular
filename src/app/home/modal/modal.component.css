@@ -1,0 +1,76 @@
+.doom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.doom-modal {
+  background: linear-gradient(to bottom, #2a0000, #1a0000);
+  border: 4px solid #8b0000;
+  border-top: 4px solid #ff0000;
+  border-bottom: 4px solid #5a0000;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 30px #ff0000, inset 0 0 20px #5a0000;
+  font-family: 'Courier New', monospace;
+  animation: doom-pulse 2s infinite alternate;
+}
+
+.doom-modal-header {
+  background: linear-gradient(to right, #8b0000, #5a0000);
+  padding: 1.5rem;
+  border-bottom: 3px solid #ff0000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doom-modal-header h3 {
+  color: #ff3030;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #ff0000;
+  font-size: 1.5rem;
+}
+
+.doom-modal-icon {
+  color: #ff0000;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px #ff0000;
+  animation: doom-blink 1s infinite;
+}
+
+.doom-modal-content {
+  padding: 2rem;
+  color: #e0a0a0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.doom-modal-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #1a0000, #2a0000);
+  border-top: 2px solid #5a0000;
+}
+
+@keyframes doom-pulse {
+  from { box-shadow: 0 0 30px #ff0000, inset 0 0 20px #5a0000; }
+  to { box-shadow: 0 0 50px #ff0000, inset 0 0 30px #8b0000; }
+}
+
+@keyframes doom-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
