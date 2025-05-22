@@ -6,6 +6,7 @@ import { DetailsComponent } from './details/details.component';
 import { Doom1Component } from './details/doom1/doom1.component';
 import { Doom2Component } from './details/doom2/doom2.component';
 import { Doom3Component } from './details/doom3/doom3.component';
+import { MusicComponent } from './music/music.component';
 
 export const routes: Routes = [
     {path: '', redirectTo:'/home', pathMatch: 'full'},
@@ -15,6 +16,8 @@ export const routes: Routes = [
     {path: 'games/doom1', component: Doom1Component},
     {path: 'games/doom2', component: Doom2Component},
     {path: 'games/doom3', component: Doom3Component},
+    {path: 'music', component: MusicComponent},
+
 
 
 

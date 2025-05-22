@@ -3,7 +3,7 @@ import { CarouselComponent } from "./carousel/carousel.component";
 import { TitleComponent } from '../shared/title/title.component';
 import { CardComponent } from '../shared/card/card.component';
 import { EmbedComponent } from './embed/embed.component';
-import { ModalComponent } from './modal/modal.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +12,7 @@ import { ModalComponent } from './modal/modal.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-isLoading = true;
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 6000); 
-  }
 }
 
 

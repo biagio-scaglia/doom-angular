@@ -4,6 +4,8 @@
     <div class="doom-title">{{title}}</div>
     <div class="doom-text">{{paragrafo}}</div>
     <div class="doom-text">{{versione}}</div>
+       <app-my-button routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" [cta]="'Vai in copertura'"></app-my-button>  
+
   </div>
 
   <div class="offers-section">
@@ -24,3 +26,4 @@
     }
   </div>
 </div>
+<router-outlet></router-outlet>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { MyButtonComponent } from '../shared/my-button/my-button.component';
 
 @Component({
   selector: 'app-games',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MyButtonComponent],
   templateUrl: './games.component.html',
   styleUrl: './games.component.css'
 })

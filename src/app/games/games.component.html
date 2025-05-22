@@ -10,9 +10,8 @@
         <p>{{ game.description }}</p>
       </div>
       <div class="doom-card-footer">
-        <a routerLink="{{game.route}}" routerLinkActive="active" ariaCurrentWhenActive="page">
-          <button class="game-btn">{{ game.button }}</button>
-        </a>
+    <app-my-button routerLink="{{game.route}}" routerLinkActive="active" ariaCurrentWhenActive="page" [cta]="'Scopri'"></app-my-button>  
+
       </div>
     </div>
   }

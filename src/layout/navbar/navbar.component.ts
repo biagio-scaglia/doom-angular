@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 export interface CustomerInfo {
@@ -21,6 +21,8 @@ export class NavbarComponent implements OnInit {
 
   customerInfo: CustomerInfo = {};
 
+@Output() customerInfoReceveid = new EventEmitter<CustomerInfo>();
+
   ngOnInit(): void {
     console.log('INIT — customerInfo iniziale:', this.customerInfo);
     this.getCustomerInfo(); 
@@ -38,7 +40,11 @@ export class NavbarComponent implements OnInit {
       eta: 20,
     };
 
+    
+
     this.customerInfo = response;
     console.log('Dati utente aggiornati:', this.customerInfo);
+    this.customerInfoReceveid.emit(this.customerInfo)
+
   }
 }

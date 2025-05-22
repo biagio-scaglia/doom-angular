@@ -4,7 +4,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-card',
-  imports: [ RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MyButtonComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })

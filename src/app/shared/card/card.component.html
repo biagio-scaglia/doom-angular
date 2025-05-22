@@ -9,7 +9,7 @@
       <p>{{ card.paragrafo }}</p>
     </div>
     <div class="doom-card-footer">
-      <a routerLink="{{card.a}}" routerLinkActive="active" ariaCurrentWhenActive="page" ><button class="doom-btn">{{card.button}}</button></a>
+    <app-my-button routerLink="{{card.a}}" routerLinkActive="active" ariaCurrentWhenActive="page" [cta]="'Combatti'"></app-my-button>  
     </div>
   </div>
   }
