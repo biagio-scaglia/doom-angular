@@ -9,7 +9,7 @@ import { MyButtonComponent } from "./shared/my-button/my-button.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, LoaderComponent, CommonModule, ModalComponent, MyButtonComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, LoaderComponent, CommonModule, ModalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -20,9 +20,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     
-    console.log("sono partito");
     setTimeout(() => {
-      console.log("sono in timer");
       this.isLoading = false;
       this.showModal = true;
       
@@ -32,11 +30,5 @@ export class AppComponent implements OnInit {
     }, 6000); 
   }
 
-  showbutton() {
-    console.log("no sono lesbica");
-  }
-
-  add() {
-    console.log("figlio cliccato, figlio fortunato")
-  }
+  
 }

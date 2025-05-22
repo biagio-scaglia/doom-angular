@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   imports: [MyButtonComponent, RouterOutlet, RouterLink, RouterLinkActive]
 })
 export class Doom3Component {
-  eta = 29;
+  eta = 10;
 
   title = "DOOM Eternal";
   paragrafo = "Become the Slayer. Rip and tear through the armies of Hell.";

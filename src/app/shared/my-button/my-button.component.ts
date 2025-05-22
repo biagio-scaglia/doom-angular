@@ -9,13 +9,5 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class MyButtonComponent {
 
 @Input () cta : string = '';
-@Output () buttonisClicked = new EventEmitter<any>();
-@Output () buttonisVisible = new EventEmitter<any>();
-ngOnInit(){
-  console.log("sono un bottone")
-}
-emitClick(){
-  console.log('sto cliccando mio figlio' + this.cta)
-  this.buttonisClicked.emit()
-}
+
 }
