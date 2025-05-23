@@ -19,9 +19,18 @@ export interface CustomerInfo {
 })
 export class NavbarComponent implements OnInit {
 
-  customerInfo: CustomerInfo = {};
+  @Output() customerInfoReceveid = new EventEmitter<CustomerInfo>();
 
-@Output() customerInfoReceveid = new EventEmitter<CustomerInfo>();
+  customerInfo: CustomerInfo = {
+    email: 'biagito@doommail.com' 
+  };
+
+  menuItems = [
+    { name: 'home', label: 'Home', path: '/home' },
+    { name: 'game', label: 'Game', path: '/games' },
+    { name: 'extra', label: 'Extras', path: '/music' },
+    { name: 'contact', label: 'Contact', path: '/contact' }
+  ];
 
   ngOnInit(): void {
     console.log('INIT — customerInfo iniziale:', this.customerInfo);
@@ -31,7 +40,7 @@ export class NavbarComponent implements OnInit {
   getCustomerInfo(): void {
     console.log('Prendo le info dell\'utente...');
 
-    let response: CustomerInfo = {
+    const response: CustomerInfo = {
       username: 'biagigio',
       nome: 'Biagio',
       cognome: 'Scaglia',
@@ -40,11 +49,8 @@ export class NavbarComponent implements OnInit {
       eta: 20,
     };
 
-    
-
     this.customerInfo = response;
     console.log('Dati utente aggiornati:', this.customerInfo);
-    this.customerInfoReceveid.emit(this.customerInfo)
-
+    this.customerInfoReceveid.emit(this.customerInfo);
   }
 }

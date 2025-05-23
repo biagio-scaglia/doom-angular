@@ -1,10 +1,19 @@
 <nav class="doom-navbar">
   <ul class="doom-navbar-list">
-    <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="doom-navbar-link">Home</a></li>
-    <li><a routerLink="/games" routerLinkActive="active" ariaCurrentWhenActive="page" class="doom-navbar-link">Giochi</a></li>
-        <li><a routerLink="/music" routerLinkActive="active" ariaCurrentWhenActive="page" class="doom-navbar-link">Extras</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" class="doom-navbar-link">Contatti</a></li>
-    <li><a class="doom-navbar-link">{{ customerInfo.email }}</a></li>
+    @for (item of menuItems; track item.name) {
+      <li>
+        <a [routerLink]="item.path" routerLinkActive="active" ariaCurrentWhenActive="page" class="doom-navbar-link">
+          {{ item.label }}
+        </a>
+      </li>
+    } @empty {
+      <li>There are no items.</li>
+    }
+
+    <li>
+      <a class="doom-navbar-link">{{ customerInfo.email }}</a>
+    </li>
   </ul>
 </nav>
+
 <router-outlet></router-outlet>

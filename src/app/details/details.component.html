@@ -1,0 +1,15 @@
+
+@switch (gameId) {
+  @case ('doom1') {
+    <app-doom1 />
+  }
+  @case ('doom2') {
+    <app-doom2 />
+  }
+  @case ('doom3') {
+    <app-doom3 />
+  }
+  @default {
+    <p>Gioco non trovato, torna alla <a routerLink="/games">lista giochi</a> 🕹️</p>
+  }
+}

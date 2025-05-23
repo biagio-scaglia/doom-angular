@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
-  imports: [],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.css'
+  styleUrls: ['./modal.component.css']
 })
-export class ModalComponent {
+export class ModalComponent implements OnInit, OnDestroy {
+  countdown = 6;
+  private intervalId: any;
 
+  ngOnInit() {
+    this.intervalId = setInterval(() => {
+      if (this.countdown > 1) {
+        this.countdown--;
+      }
+    }, 1000);
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
 }

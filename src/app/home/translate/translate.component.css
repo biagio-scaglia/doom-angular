@@ -1,0 +1,42 @@
+  #google_translate_element {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Courier New', monospace !important;
+    filter: drop-shadow(0 0 2px #ff0000) contrast(150%);
+  }
+
+  .goog-te-combo {
+    background-color: #000 !important;
+    color: #ff0000 !important;
+    border: 2px solid #ff0000 !important;
+    padding: 5px 10px !important;
+    font-family: 'Courier New', monospace !important;
+    font-weight: bold !important;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><rect x='0' y='0' width='16' height='16' fill='%23ff0000' opacity='0.8'/></svg>"), auto !important;
+  }
+
+  .goog-te-combo:hover {
+    background-color: #1a0000 !important;
+    text-shadow: 0 0 3px #ff0000 !important;
+  }
+
+  .goog-te-banner-frame {
+    display: none !important;
+  }
+
+  .goog-te-gadget {
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+  }
+
+  .goog-te-button {
+    border: 1px solid #ff0000 !important;
+    background-image: linear-gradient(to bottom, #000, #222) !important;
+  }
+
+  .goog-te-menu-value {
+    image-rendering: pixelated !important;
+  }

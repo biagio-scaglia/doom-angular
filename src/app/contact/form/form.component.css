@@ -114,3 +114,75 @@ button::after {
 button:hover::after {
   left: 100%;
 }
+/* Stile per il dropdown delle regioni */
+.coverage-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #333;
+  border: 2px solid #555;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff6a6a'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.coverage-container select:focus {
+  outline: none;
+  border-color: #ff3333;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+.coverage-container select option {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 10px;
+}
+
+.coverage-container select:active, 
+.coverage-container select:focus {
+  background-color: #444;
+}
+
+.coverage-container .select-wrapper {
+  position: relative;
+}
+
+.coverage-container .select-wrapper::after {
+  content: "▼";
+  color: #ff6a6a;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.error-message {
+  color: #ff3333;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #2a0000;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}

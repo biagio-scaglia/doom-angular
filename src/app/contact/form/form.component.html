@@ -2,21 +2,37 @@
   <h1>Verifica Copertura</h1>
   
   @if (!showResult) {
-    <form (submit)="saveForm($event, address.value, city.value, zip.value)">
+    <form (submit)="saveForm($event, address.value, city.value, zip.value, region.value)">
       <div>
         <label>Indirizzo</label>
-        <input #address [value]="formData.address" placeholder="Inserisci indirizzo">
+        <input #address [value]="formData.address" placeholder="Inserisci indirizzo" required>
       </div>
       
       <div>
         <label>Città</label>
-        <input #city [value]="formData.city" placeholder="Inserisci città">
+        <input #city [value]="formData.city" placeholder="Inserisci città" required>
       </div>
       
       <div>
         <label>CAP</label>
-        <input #zip [value]="formData.zip" placeholder="Inserisci CAP">
+        <input #zip [value]="formData.zip" placeholder="Inserisci CAP" required>
       </div>
+
+      <div class="select-wrapper">
+  <select #region [value]="formData.region" required>
+    <option value="">Seleziona una regione</option>
+    @for (region of italianRegions; track region) {
+      <option [value]="region">{{region}}</option>
+    }
+  </select>
+</div>
+
+
+      @if (formError) {
+        <div class="error-message">
+          {{ formError }}
+        </div>
+      }
       
       <button type="submit">Verifica</button>
     </form>

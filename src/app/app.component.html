@@ -6,6 +6,12 @@
 <app-modal></app-modal>
 }
 
-<app-navbar ></app-navbar>
+<app-navbar></app-navbar><app-translate></app-translate>
+<div class="visit-counter">
+  👀 Hai visitato questa pagina <strong>{{ visitCount }}</strong> volte!
+</div>
+<app-history></app-history>
+
+
 <app-footer></app-footer>
 <router-outlet></router-outlet>
